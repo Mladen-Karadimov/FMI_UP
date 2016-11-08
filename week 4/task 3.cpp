@@ -5,16 +5,18 @@ int main() {
 	int n;
 	cout << "Please insert 3 digit number: " << endl;
 	cin >> n;
-	int digitSum = 1;
+	int digitSum = 0;
+	int digitMul = 1;
 
 	while (n > 0) {
-	    digitSum *= n % 10;
+	    digitMul *= n % 10;
+	    digitSum += n % 10;
 	    n /= 10;
 	}
-	if (digitSum >= 100 && digitSum <= 999) {
-	   cout << "YES " << digitSum << endl; 
+	if (digitMul >= 100 && digitMul <= 999) {
+	   cout << "YES " << digitMul << endl; 
 	} else {
-	    cout << "NO " << digitSum << endl;
+	    cout << "NO " << digitMul - digitSum << endl;
 	}
 	return 0;
 }
