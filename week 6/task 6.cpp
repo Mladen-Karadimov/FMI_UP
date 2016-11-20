@@ -13,9 +13,9 @@ int main() {
 		tmp /= 10;
 	}
 	
-	for (int i = 0; i < symbols/2 || check; i++) {
+	for (int i = 0; i < symbols/2 && check; i++) {
 	    int left = number/pow(10,symbols - i - 1);
-		int right = number/pow(10,i);
+	    int right = number/pow(10,i);
 	    if (left % 10 != right % 10)
 	        check = false;
 	}
